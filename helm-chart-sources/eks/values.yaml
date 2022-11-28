@@ -1,0 +1,25 @@
+# Default values for eks.
+# This is a YAML-formatted file.
+
+
+clusterName: default-name
+
+logTypes:
+  - "api"
+  - "audit"
+  - "authenticator"
+  - "controllerManager"
+  - "scheduler"
+
+subnets:
+  - "subnet-0aad42f78f5b738f7"
+  - "subnet-04a0512511bdeb477"
+
+secGroupIds:
+  - "sg-0af816ae1b1ffccad"
+
+region: us-east-1
+
+version: "1.21"
+
+roleArn: arn:aws:iam::092463844305:role/fwks-staging-fwks-poc-master-role

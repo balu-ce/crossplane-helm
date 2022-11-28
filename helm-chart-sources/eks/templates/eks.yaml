@@ -1,0 +1,29 @@
+apiVersion: eks.aws.upbound.io/v1beta1
+kind: Cluster
+metadata:
+  annotations:
+    {{- include "eks.annotations" . | nindent 4 }}
+  name: {{ .Values.clusterName }}
+spec:
+  forProvider:
+    enabledClusterLogTypes:
+      {{ toYaml .Values.clusterName | indent 6  }}
+    version: {{ .Values.version }}
+    region: {{ .Values.region }}
+    roleArn: {{ .Values.roleArn }}
+    vpcConfig:
+      - endpointPrivateAccess: true
+        endpointPublicAccess: false
+        securityGroupIds:
+          {{ toYaml .Values.secGroupIds | nindent 10 }}
+        subnetIds:
+          {{ toYaml .Values.subnets | nindent 10 }}
+  providerConfigRef:
+    name: web-identity
+  providerRef:
+    name: upjet-provider-aws
+  writeConnectionSecretToRef:
+    name: crossplane-poc-eks-upjet
+    namespace: crossplane-system
+
+  
