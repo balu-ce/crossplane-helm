@@ -3,12 +3,12 @@ entries:
   eks:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2022-11-28T12:38:38.786647+05:30"
+    created: "2022-12-02T21:39:49.064045+05:30"
     description: A Helm chart for Kubernetes
     digest: 0855abf073c6dc6e556fa88529c8266e49306a0c2c272062ff8168fe5d66bf50
     name: eks
     type: application
     urls:
-    - https://github.com/balu-ce/crossplane-helm/eks-0.1.0.tgz
+    - https://balu-ce.github.io/crossplane-helm/eks-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-28T12:38:38.785913+05:30"
+generated: "2022-12-02T21:39:49.062369+05:30"

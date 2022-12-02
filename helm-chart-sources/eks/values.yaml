@@ -2,7 +2,7 @@
 # This is a YAML-formatted file.
 
 
-clusterName: default-name
+clusterName: helm-poc
 
 logTypes:
   - "api"
