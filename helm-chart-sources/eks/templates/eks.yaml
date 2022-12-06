@@ -1,7 +1,6 @@
 apiVersion: eks.aws.upbound.io/v1beta1
 kind: Cluster
 metadata:
-  namespace: customer-1
   annotations:
     {{- include "eks.annotations" . | nindent 4 }}
   name: {{ .Values.clusterName }}
